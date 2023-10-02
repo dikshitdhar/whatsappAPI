@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(249, 238, 223);
+      }
+      button {
+        margin-top: 100px;
+        height: 125px;
+        width: 250px;
+        background-color: rgb(76, 232, 76);
+        border: dotted 1px rgb(2, 47, 2);
+        border-radius: 30px;
+        padding: 10px;
+        text-decoration: underline black;
+        font-size: 30px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.516);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="sendWhatsAppMessage()">Send Message</button>
+
+    <script>
+      function sendWhatsAppMessage() {
+        var phoneNumber = "6005880541"; // Replace with the phone number you want to send a message to
+        var message = "hehehe."; // Replace with your message
+        var encodedMessage = encodeURIComponent(message);
+        var whatsappUrl =
+          "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+        window.open(whatsappUrl, "_blank");
+      }
+    </script>
+  </body>
+</html>
